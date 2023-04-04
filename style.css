@@ -1,0 +1,39 @@
+body {
+    margin: 0;      /* убираем отступы */
+    color: white; /* цвет шрифта */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* шрифт теста */
+}
+
+#results, #instructions {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.75);
+} 
+
+/* сообщение о конце игры не показываем на старте */
+#results {
+    display: none;
+    cursor: default;
+}
+
+/* отступы в текстах */
+#results .content,
+#instructions .content {
+    max-width: 300px;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+/* настройка вывода набранных очков в правом верхнем углу */
+#score {
+    position: absolute;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    top: 30px;
+    right: 30px;
+}

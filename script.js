@@ -303,9 +303,14 @@ function init() {
   
   
   
-  // отслеживаем нажатия на клавиши и мышь
-  window.addEventListener("mousedown", eventHandler);
+// если игра запущена на мобильном устройстве
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+  // то добавляем отслеживание события нажатия на экран
   window.addEventListener("touchstart", eventHandler);
+} else {
+  // иначе, если это ПК, добавляем отслеживание нажатия мыши
+  window.addEventListener("mousedown", eventHandler);
+}
   window.addEventListener("keydown", function (event) {
     // если нажат пробел
     if (event.key == " ") {

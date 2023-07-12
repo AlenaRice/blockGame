@@ -1,5 +1,4 @@
 # blockGame
-# 3D Stack Game
 
 ## Описание проекта
 
